@@ -1,0 +1,118 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+        --primary: #4f46e5;
+        --secondary: #818cf8;
+    }
+
+    body {
+        background: #0f172a; /* Fond sombre moderne */
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+/* Container principal */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.upload-box {
+  background: #ffffff;
+  border: 2px dashed #cbd5e1;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Animation au survol */
+.upload-box:hover {
+  border-color: #1d6f42;
+  background-color: #f0fdf4;
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.zip-icon {
+  font-size: 60px;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Bouton stylisé */
+.btn-upload {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #1d6f42; /* Vert Excel */
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-upload:hover {
+  background: #155231;
+  box-shadow: 0 4px 12px rgba(29, 111, 66, 0.3);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* Barre de progression */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  transition: width 0.3s ease;
+}
+
+#status-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card {
+  animation: fadeIn 0.8s ease-in;
+}
